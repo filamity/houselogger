@@ -24,7 +24,6 @@ function Student({ display, dataName, passData, room }) {
                     <span style={{verticalAlign: "middle"}}>{room}</span>
                     <Checkbox
                         edge="end"
-                        // disabled={disabled}
                         value={dataName}
                         onChange={handleChange}
                         name={dataName}
