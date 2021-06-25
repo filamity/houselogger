@@ -1,0 +1,333 @@
+{
+    
+    "removes": [
+        {
+            "id": 1,
+            "firstName": "Charlie",
+            "lastName": "Allday",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 2,
+            "firstName": "Charlie",
+            "lastName": "Arnison",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 3,
+            "firstName": "Josh",
+            "lastName": "Ashley",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 4,
+            "firstName": "Oscar",
+            "lastName": "Bearman",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 5,
+            "firstName": "Awni",
+            "lastName": "Dajani",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 6,
+            "firstName": "Louis",
+            "lastName": "Deshpande",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 7,
+            "firstName": "Freddie",
+            "lastName": "Emery",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 8,
+            "firstName": "James",
+            "lastName": "Flach",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 9,
+            "firstName": "Rory",
+            "lastName": "Grant",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 10,
+            "firstName": "Freddie",
+            "lastName": "Harrison",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 11,
+            "firstName": "Harry",
+            "lastName": "Minderides",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 12,
+            "firstName": "Lucas",
+            "lastName": "Ozmen",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 13,
+            "firstName": "Henry",
+            "lastName": "Porter",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 14,
+            "firstName": "Freddie",
+            "lastName": "Williams",
+            "room": "[rm no.]"
+        }
+    ],
+
+    "fifths": [
+        {
+            "id": 1,
+            "firstName": "Zane",
+            "lastName": "Akbar Khan",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 2,
+            "firstName": "Tobi",
+            "lastName": "Amusan",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 3,
+            "firstName": "Algie",
+            "lastName": "Anderson",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 4,
+            "firstName": "Caspar",
+            "lastName": "Baker",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 5,
+            "firstName": "Valentine",
+            "lastName": "Ballingal",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 6,
+            "firstName": "Jonathan",
+            "lastName": "Brockwell",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 7,
+            "firstName": "Harry",
+            "lastName": "Burt",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 8,
+            "firstName": "George",
+            "lastName": "Chan",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 9,
+            "firstName": "John",
+            "lastName": "Edwards",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 10,
+            "firstName": "Misha",
+            "lastName": "Newington",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 11,
+            "firstName": "Tomiwa",
+            "lastName": "Oyegade",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 12,
+            "firstName": "Sam",
+            "lastName": "Phillips",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 13,
+            "firstName": "Aaron",
+            "lastName": "Sohal",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 14,
+            "firstName": "Gus",
+            "lastName": "Stanhope",
+            "room": "[rm no.]"
+        }
+    ],
+
+    "lsixths": [
+        {
+            "id": 1,
+            "firstName": "Ben",
+            "lastName": "Ashley",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 2,
+            "firstName": "Tom",
+            "lastName": "Emery",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 3,
+            "firstName": "Victor",
+            "lastName": "Grant",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 4,
+            "firstName": "Sam",
+            "lastName": "Harrison",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 5,
+            "firstName": "Andre",
+            "lastName": "Ma",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 6,
+            "firstName": "Max",
+            "lastName": "Morgan",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 7,
+            "firstName": "Dani",
+            "lastName": "Neal",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 8,
+            "firstName": "Jake",
+            "lastName": "Posner-Kane",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 9,
+            "firstName": "Caddy",
+            "lastName": "Preston",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 10,
+            "firstName": "Henry",
+            "lastName": "Rowntree",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 11,
+            "firstName": "Jonty",
+            "lastName": "Williams",
+            "room": "[rm no.]"
+        }
+    ],
+
+    "usixths": [
+        {
+            "id": 1,
+            "firstName": "Jake",
+            "lastName": "Brockwell",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 2,
+            "firstName": "Hugo",
+            "lastName": "Gaffey",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 3,
+            "firstName": "Freddie",
+            "lastName": "Gregory",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 4,
+            "firstName": "George",
+            "lastName": "Hall",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 5,
+            "firstName": "George",
+            "lastName": "Hamblin",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 6,
+            "firstName": "Leon",
+            "lastName": "Kinaro",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 7,
+            "firstName": "Alex",
+            "lastName": "Lee",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 8,
+            "firstName": "Patrick",
+            "lastName": "Lehrell",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 9,
+            "firstName": "Shiraz",
+            "lastName": "Mueller",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 10,
+            "firstName": "Chike",
+            "lastName": "Odogwu",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 11,
+            "firstName": "Sam",
+            "lastName": "Owston",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 12,
+            "firstName": "Theo",
+            "lastName": "Tomlinson",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 13,
+            "firstName": "Aarav",
+            "lastName": "Tribhuvan",
+            "room": "[rm no.]"
+        },
+        {
+            "id": 14,
+            "firstName": "George",
+            "lastName": "Williams",
+            "room": "[rm no.]"
+        }
+    ]
+
+}
