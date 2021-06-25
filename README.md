@@ -2,6 +2,10 @@
 
 Houselogger is a tool made for housemasters to keep track of their boys' bedtimes.
 
+View the latest deploy at [https://houselogger.netlify.app/](https://houselogger.netlify.app/).
+
+Functionally, this app is very similar to [https://github.com/filamity/espiel](Espiel).
+
 Please refer to package.json for the list of dependencies needed.
 
 ## Functionalities to add
