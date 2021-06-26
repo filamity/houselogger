@@ -1,5 +1,8 @@
 # Houselogger
 
+![Team Enigma](https://img.shields.io/badge/Harrow%20School-blue)
+
+
 Houselogger is a tool made for housemasters to keep track of their boys' bedtimes.
 
 View the latest deploy at [https://houselogger.netlify.app/](https://houselogger.netlify.app/).
