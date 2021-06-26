@@ -25,20 +25,20 @@ function LSixths({ passData }) {
 
     return (
         <>
-            <h3 style={{fontSize: "18px"}}>Lower Sixth
-				{namelist.lsixths.map((lsixth, index) => {
-					return <Student 
-								checked={(state.lsixth !== undefined) 
-									? state.lsixth[lsixth.lastName]
-									: false
-								}
-								dataName={lsixth.lastName} 
-								display={lsixth.lastName + ", " + lsixth.firstName} 
-								passData={setChildData}
-								room={lsixth.room} 
-							/>
-				})}
-			</h3>
+           	<section style={{height: "20px"}}></section>
+			{namelist.lsixths.map((lsixth, index) => {
+				return <Student 
+							key={lsixth.key}
+							checked={(state.lsixth !== undefined) 
+								? state.lsixth[lsixth.lastName]
+								: false
+							}
+							dataName={lsixth.lastName} 
+							display={lsixth.lastName + ", " + lsixth.firstName} 
+							passData={setChildData}
+							room={lsixth.room} 
+						/>
+			})}
         </>
     )
 }

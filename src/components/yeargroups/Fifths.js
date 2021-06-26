@@ -25,20 +25,20 @@ function Fifths({ passData }) {
 
     return (
         <>
-            <h3 style={{fontSize: "18px"}}>Fifth Form
-				{namelist.fifths.map((fifth, index) => {
-					return <Student 
-								checked={(state.fifth !== undefined) 
-									? state.fifth[fifth.lastName]
-									: false
-								}
-								dataName={fifth.lastName} 
-								display={fifth.lastName + ", " + fifth.firstName} 
-								passData={setChildData}
-								room={fifth.room} 
-							/>
-				})}
-			</h3>
+            <section style={{height: "20px"}}></section>
+			{namelist.fifths.map((fifth, index) => {
+				return <Student 
+							key={fifth.key}
+							checked={(state.fifth !== undefined) 
+								? state.fifth[fifth.lastName]
+								: false
+							}
+							dataName={fifth.lastName} 
+							display={fifth.lastName + ", " + fifth.firstName} 
+							passData={setChildData}
+							room={fifth.room} 
+						/>
+			})}
         </>
     )
 }

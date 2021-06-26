@@ -1,26 +1,26 @@
 @font-face {
-	font-family: "Century Schoolbook";
-	src: url("./assets/fonts/SCHLBKBI.TTF");
+	font-family: "Inter";
+	src: url("./assets/fonts/Inter-ExtraBold.ttf");
+	font-weight: bolder
+}
+@font-face {
+	font-family: "Inter";
+	src: url("./assets/fonts/Inter-Light.ttf");
+	font-weight: lighter;
+}
+@font-face {
+	font-family: "Inter";
+	src: url("./assets/fonts/Inter-Bold.ttf");
 	font-weight: bold;
-	font-style: italic, oblique;
 }
 @font-face {
-	font-family: "Century Schoolbook";
-	src: url("./assets/fonts/SCHLBKI.TTF");
-	font-style: italic, oblique;
-}
-@font-face {
-	font-family: "Century Schoolbook";
-	src: url("./assets/fonts/SCHLBKB.TTF");
-	font-weight: bold;
-}
-@font-face {
-	font-family: "Century Schoolbook";
-	src: url("./assets/fonts/CENSCBK.TTF");
+	font-family: "Inter";
+	src: url("./assets/fonts/Inter-Regular.ttf");
 }
 
+
 * {
-	font-family: "Century Schoolbook";
+	font-family: "Inter";
 	list-style-type: none !important;
 }
 

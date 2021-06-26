@@ -9,7 +9,7 @@ import { Context } from "../../Store"
 function Removes({ passData }) {
 	const [state] = useContext(Context)
 
-	// Change this to state.remove once implemented skeleton data in initialState (Store.js)
+	// Change this to state.remove
     const [childData, setChildData] = useState((state.remove !== undefined) ? state.remove : {})
 	const [removeData, setRemoveData] = useState((state.remove !== undefined) ? state.remove : {})
 
@@ -24,22 +24,22 @@ function Removes({ passData }) {
 
     passData(removeData)
 
+
     return (
         <>
-            <h3 style={{fontSize: "18px"}}>Removes
-				{namelist.removes.map((remove, index) => {
-					return <Student
-								checked={(state.remove !== undefined) 
-											? state.remove[remove.lastName]
-											: false
-										}
-								dataName={remove.lastName} 
-								display={remove.lastName + ", " + remove.firstName} 
-								passData={setChildData}
-								room={remove.room} 
-							/>
-				})}
-			</h3>
+			{namelist.removes.map((remove, index) => {
+				return <Student
+							key={remove.key}
+							checked={(state.remove !== undefined) 
+										? state.remove[remove.lastName]
+										: false
+									}
+							dataName={remove.lastName} 
+							display={remove.lastName + ", " + remove.firstName} 
+							passData={setChildData}
+							room={remove.room} 
+						/>
+			})}
         </>
     )
 }

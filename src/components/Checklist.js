@@ -33,6 +33,7 @@ function Checklist() {
 	// Save to global state
 	useEffect(() => {
 		setState(allData)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [removeData, fifthData, lsixthData, usixthData])
 
 	const handleChange = (event) => {
