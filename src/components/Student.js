@@ -6,7 +6,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 
-function Student({ display, dataName, passData, room }) {
+function Student({ checked, display, dataName, passData, room }) {
 
     const handleChange = (e) => {
         passData([e.target.name, e.target.checked])
@@ -23,6 +23,7 @@ function Student({ display, dataName, passData, room }) {
 				<ListItemSecondaryAction id="adddelete">
                     <span style={{verticalAlign: "middle"}}>{room}</span>
                     <Checkbox
+                        checked={checked}
                         edge="end"
                         value={dataName}
                         onChange={handleChange}

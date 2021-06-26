@@ -1,12 +1,16 @@
 import '../../App.css'
 import Student from "../Student"
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 
 import namelist from "../../namelist.json"
 
+import { Context } from "../../Store"
+
 function USixths({ passData }) {
-    const [childData, setChildData] = useState({})
-	const [usixthData, setUsixthData] = useState({})
+	const [state] = useContext(Context)
+
+    const [childData, setChildData] = useState((state.usixth !== undefined) ? state.usixth : {})
+	const [usixthData, setUsixthData] = useState((state.usixth !== undefined) ? state.usixth : {})
 
 	useEffect(() => {
 		if (childData[0] !== undefined) {
@@ -24,6 +28,10 @@ function USixths({ passData }) {
             <h3 style={{fontSize: "18px"}}>Upper Sixth
 				{namelist.usixths.map((usixth, index) => {
 					return <Student 
+								checked={(state.usixth !== undefined) 
+									? state.usixth[usixth.lastName]
+									: false
+								}
 								dataName={usixth.lastName} 
 								display={usixth.lastName + ", " + usixth.firstName} 
 								passData={setChildData}

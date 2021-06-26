@@ -7,6 +7,8 @@ import Checklist from "./components/Checklist"
 import UpEarlies from './components/UpEarlies'
 import { useState } from 'react'
 
+import Store from "./Store"
+
 function App() {
     const [tabVal, setTabVal] = useState(0)
 
@@ -15,7 +17,7 @@ function App() {
 	}
 
     return (
-        <>
+        <Store>
 
             <Container maxWidth="sm">
 
@@ -36,7 +38,8 @@ function App() {
                 {tabVal === 2 && <div>hi2</div>}
 
             </Container>
-        </>
+
+        </Store>
     )
 }
 

@@ -1,5 +1,5 @@
 import '../App.css'
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 
 import Removes from './yeargroups/Removes'
 import Fifths from './yeargroups/Fifths'
@@ -11,20 +11,29 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import Select from '@material-ui/core/Select'
 
+import { Context } from "../Store"
+
 function Checklist() {
+	const [state, setState] = useContext(Context)
+
 	const [display, setDisplay] = useState("Removes")
 
-	const [removeData, setRemoveData] = useState({})
-	const [fifthData, setFifthData] = useState({})
-	const [lsixthData, setLsixthData] = useState({})
-	const [usixthData, setUsixthData] = useState({})
+	const [removeData, setRemoveData] = useState(state.remove)
+	const [fifthData, setFifthData] = useState(state.fifth)
+	const [lsixthData, setLsixthData] = useState(state.lsixth)
+	const [usixthData, setUsixthData] = useState(state.usixth)
 
 	var allData = {
-		...removeData,
-		...fifthData,
-		...lsixthData,
-		...usixthData
+		remove: {...removeData},
+		fifth: {...fifthData},
+		lsixth: {...lsixthData},
+		usixth: {...usixthData},
 	}
+
+	// Save to global state
+	useEffect(() => {
+		setState(allData)
+	}, [removeData, fifthData, lsixthData, usixthData])
 
 	const handleChange = (event) => {
 		setDisplay(event.target.value)
@@ -33,7 +42,9 @@ function Checklist() {
 	return (
 		<>
 
-			<pre>allData = {JSON.stringify(allData, null, 2)}</pre>
+			<pre>
+				state = {JSON.stringify(state, null, 2)}
+			</pre>
 			
 			<br/>
 

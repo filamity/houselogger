@@ -1,12 +1,17 @@
 import '../../App.css'
 import Student from "../Student"
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 
 import namelist from "../../namelist.json"
 
+import { Context } from "../../Store"
+
 function Removes({ passData }) {
-    const [childData, setChildData] = useState({})
-	const [removeData, setRemoveData] = useState({})
+	const [state] = useContext(Context)
+
+	// Change this to state.remove once implemented skeleton data in initialState (Store.js)
+    const [childData, setChildData] = useState((state.remove !== undefined) ? state.remove : {})
+	const [removeData, setRemoveData] = useState((state.remove !== undefined) ? state.remove : {})
 
 	useEffect(() => {
 		if (childData[0] !== undefined) {
@@ -23,7 +28,11 @@ function Removes({ passData }) {
         <>
             <h3 style={{fontSize: "18px"}}>Removes
 				{namelist.removes.map((remove, index) => {
-					return <Student 
+					return <Student
+								checked={(state.remove !== undefined) 
+											? state.remove[remove.lastName]
+											: false
+										}
 								dataName={remove.lastName} 
 								display={remove.lastName + ", " + remove.firstName} 
 								passData={setChildData}

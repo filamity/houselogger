@@ -1,12 +1,16 @@
 import '../../App.css'
 import Student from "../Student"
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 
 import namelist from "../../namelist.json"
 
+import { Context } from "../../Store"
+
 function LSixths({ passData }) {
-    const [childData, setChildData] = useState({})
-	const [lsixthData, setLsixthData] = useState({})
+	const [state] = useContext(Context)
+
+    const [childData, setChildData] = useState((state.lsixth !== undefined) ? state.lsixth : {})
+	const [lsixthData, setLsixthData] = useState((state.lsixth !== undefined) ? state.lsixth : {})
 
 	useEffect(() => {
 		if (childData[0] !== undefined) {
@@ -24,6 +28,10 @@ function LSixths({ passData }) {
             <h3 style={{fontSize: "18px"}}>Lower Sixth
 				{namelist.lsixths.map((lsixth, index) => {
 					return <Student 
+								checked={(state.lsixth !== undefined) 
+									? state.lsixth[lsixth.lastName]
+									: false
+								}
 								dataName={lsixth.lastName} 
 								display={lsixth.lastName + ", " + lsixth.firstName} 
 								passData={setChildData}
