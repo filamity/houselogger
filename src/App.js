@@ -21,6 +21,8 @@ function App() {
 
             <Container maxWidth="sm">
 
+                <section style={{height: "20px"}}></section>
+
                 <h1>Welcome to Houselogger</h1>
                 <p style={{marginTop: "-20px"}}>Digital Student Manager</p>
                 <br/>

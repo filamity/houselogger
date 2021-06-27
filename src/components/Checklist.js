@@ -16,8 +16,8 @@ function Checklist() {
 
 	const [display, setDisplay] = useState("Fifths")
 
-	const [removeData, setRemoveData] = useState(state.remove)
-	const [fifthData, setFifthData] = useState(state.fifth)
+	const [removeData] = useState(state.remove)
+	const [fifthData] = useState(state.fifth)
 
 	var allData = {
 		remove: {...removeData},

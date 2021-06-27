@@ -34,6 +34,7 @@ function Removes() {
 				[childData[0]]: childData[1]
 			}))
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [childData])
 
 	useEffect(() => {
@@ -43,6 +44,7 @@ function Removes() {
 				remove: removeData
 			}))
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [removeData])
 
 	if (!dataHere) {

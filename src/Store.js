@@ -6,7 +6,7 @@ export const Context = React.createContext()
 const Store = ({ children }) => {
     
     var all_remove_data = firestore.collection("student-data").doc("removes")
-    const [state, setState] = useState({"remove":{},"fifth":{},"lsixth":{},"usixth":{}})
+    const [state, setState] = useState({"remove":{},"fifth":{}})
     
     useEffect(() => {
 
@@ -23,18 +23,17 @@ const Store = ({ children }) => {
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-    console.log(state)
     
     useEffect(() => {
 
+        // Looks for these keys in state; indicates whether data has arrived
+        var data_here = (state.remove.Allday !== undefined) && (state.fifth.Chan !== undefined)
+
         // Wait for data to return. Extremely rudimentary solution.
-        if (state !== undefined) {
-            setTimeout(() => {
-                all_remove_data.update({
-                    all: state
-                })
-            }, 5000)
+        if (data_here) {
+            all_remove_data.update({
+                all: state
+            })
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
