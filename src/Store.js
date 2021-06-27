@@ -14,7 +14,6 @@ const Store = ({ children }) => {
         all_remove_data.get().then((doc) => {
             if (doc.exists) {
                 setState(doc.data().all)
-                console.log(doc.data().all)
             } else {
                 console.log("Document not found!")
             }
@@ -24,15 +23,19 @@ const Store = ({ children }) => {
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    console.log(state)
     
     useEffect(() => {
 
         // Wait for data to return. Extremely rudimentary solution.
-        setTimeout(() => {
-            all_remove_data.update({
-                all: state
-            })
-        }, 5000)
+        if (state !== undefined) {
+            setTimeout(() => {
+                all_remove_data.update({
+                    all: state
+                })
+            }, 5000)
+        }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state])

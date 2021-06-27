@@ -3,29 +3,61 @@ import Student from "../Student"
 import { useEffect, useState, useContext } from 'react'
 
 import namelist from "../../namelist.json"
-
 import { Context } from "../../Store"
 
-function Fifths({ passData }) {
-	const [state] = useContext(Context)
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-    const [childData, setChildData] = useState((state.fifth !== undefined) ? state.fifth : {})
-	const [fifthData, setFifthData] = useState((state.fifth !== undefined) ? state.fifth : {})
+function Fifths() {
+	const [state, setState] = useContext(Context)
+
+    const [childData, setChildData] = useState({})
+	const [fifthData, setFifthData] = useState({})
+
+	const [saving, setSaving] = useState(0)
+
+	var dataHere = false
+	if (state.fifth.Chan !== undefined) {
+		dataHere = true
+	}
 
 	useEffect(() => {
-		if (childData[0] !== undefined) {
+		setSaving(1)
+		setTimeout(() => setSaving(0), 8000)
+	}, [childData])
+
+	// Passes everything to removeData
+	useEffect(() => {
+		if (dataHere) {
+			setFifthData(state.fifth)
 			setFifthData((prev) => ({
 				...prev,
 				[childData[0]]: childData[1]
 			}))
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [childData])
 
-    passData(fifthData)
+	useEffect(() => {
+		if (dataHere) {
+			setState((prev) => ({
+				...prev,
+				fifth: fifthData
+			}))
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [fifthData])
+
+    if (!dataHere) {
+		return (
+			<div className="spinner">
+				<CircularProgress />
+			</div>
+		)
+	}
 
     return (
         <>
-            <section style={{height: "20px"}}></section>
+            <center style={{opacity: saving}}>Saving...</center>
 			{namelist.fifths.map((fifth, index) => {
 				return <Student 
 							key={fifth.key}

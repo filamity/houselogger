@@ -26,16 +26,19 @@ function App() {
                 <br/>
 
                 <AppBar position="static">
-                    <Tabs value={tabVal} onChange={handleTabs}>
+                    <Tabs value={tabVal} onChange={handleTabs} variant="fullWidth">
                         <Tab label="Checklist" />
                         <Tab label="Up Earlies" />
-                        <Tab label="Item Three" />
                     </Tabs>
                 </AppBar>
                 
-                {tabVal === 0 && <Checklist />}
-                {tabVal === 1 && <UpEarlies />}
-                {tabVal === 2 && <div>hi2</div>}
+                <div style={{display: tabVal === 0 ? "block" : "none"}}>
+                    <Checklist />
+                </div>
+
+                <div style={{display: tabVal === 1 ? "block" : "none"}}>
+                    <UpEarlies />
+                </div>
 
             </Container>
 
